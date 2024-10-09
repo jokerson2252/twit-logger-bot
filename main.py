@@ -44,7 +44,7 @@ async def tweet(update: Update, context: CallbackContext) -> None:
 
     username = response_data['data']['username']
 
-    tweet_data = {'text': tweet_text, }
+    tweet_data = {'text': tweet_text }
     response = requests.post(tweet_url, json=tweet_data, headers=headers)
     response_data = response.json()
 
